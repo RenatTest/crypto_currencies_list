@@ -59,7 +59,13 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
                   Text(
                     'Please try again later',
                     style: theme.textTheme.labelSmall?.copyWith(fontSize: 16),
-                  )
+                  ),
+                  const SizedBox(height: 30),
+                  TextButton(
+                      onPressed: () {
+                        _cryptoListBloc.add(LoadCryptoList());
+                      },
+                      child: const Text('Try again'))
                 ],
               ),
             );
