@@ -10,7 +10,9 @@ class CryptoListBloc extends Bloc<CryptoListEvent, CryptoListState> {
   CryptoListBloc(this.coinsRepository) : super(CryptoListInitial()) {
     on<LoadCryptoList>((event, emit) async {
       try {
-        emit(CryptoListLoading());
+        if (state is! CryptoListLoaded) {
+          emit(CryptoListLoading());
+        }
         final coinsList = await coinsRepository.getCoinsList();
         emit(CryptoListLoaded(coinsList: coinsList));
       } catch (e) {
