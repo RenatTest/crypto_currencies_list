@@ -1,6 +1,6 @@
-import 'package:crypto_coins_list/repositories/crypto_coins/abstract_coins_repository.dart';
 import 'package:crypto_coins_list/repositories/crypto_coins/crypto_coins.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 part 'crypto_list_event.dart';
 part 'crypto_list_state.dart';
 
