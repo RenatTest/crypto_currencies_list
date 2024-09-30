@@ -13,3 +13,9 @@ class CryptoListLoaded extends CryptoListState {
 
   final List<CryptoCoin> coinsList;
 }
+
+class CryptoListLoadingFailure extends CryptoListState {
+  CryptoListLoadingFailure({this.exception});
+
+  final Object? exception;
+}
