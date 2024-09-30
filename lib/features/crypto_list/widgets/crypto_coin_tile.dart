@@ -35,7 +35,7 @@ class CryptoCoinTile extends StatelessWidget {
         // II-nd method of Navigation
         Navigator.of(context).pushNamed(
           '/coin',
-          arguments: coin.name,
+          arguments: coin,
         );
       },
     );
