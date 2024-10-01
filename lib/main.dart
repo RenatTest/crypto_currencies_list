@@ -8,7 +8,7 @@ import 'package:talker_flutter/talker_flutter.dart';
 void main() {
   final talker = TalkerFlutter.init();
   GetIt.I.registerSingleton(talker);
-  GetIt.I<Talker>();
+  GetIt.I<Talker>().debug('Talker started...');
 
   GetIt.I.registerLazySingleton<AbstractCoinsRepository>(
     () => CryptoCoinsRepository(dio: Dio()),
