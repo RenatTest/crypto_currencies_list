@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:crypto_coins_list/crypto_coins_list_app.dart';
 import 'package:crypto_coins_list/repositories/crypto_coins/crypto_coins.dart';
 import 'package:dio/dio.dart';
@@ -13,5 +15,9 @@ void main() {
   GetIt.I.registerLazySingleton<AbstractCoinsRepository>(
     () => CryptoCoinsRepository(dio: Dio()),
   );
-  runApp(const CryptoCurrenciesListApp());
+
+  runZonedGuarded(
+    () => runApp(const CryptoCurrenciesListApp()),
+    (error, stack) => GetIt.I<Talker>().handle(error, stack),
+  );
 }
