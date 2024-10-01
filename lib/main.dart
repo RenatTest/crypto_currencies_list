@@ -27,6 +27,10 @@ void main() {
 
   Bloc.observer = TalkerBlocObserver(
     talker: talker,
+    settings: const TalkerBlocLoggerSettings(
+      printStateFullData: false,
+      printEventFullData: false,
+    ),
   );
 
   GetIt.I.registerLazySingleton<AbstractCoinsRepository>(
