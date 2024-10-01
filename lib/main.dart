@@ -16,6 +16,9 @@ void main() {
     () => CryptoCoinsRepository(dio: Dio()),
   );
 
+  FlutterError.onError =
+      (details) => GetIt.I<Talker>().handle(details.exception, details.stack);
+
   runZonedGuarded(
     () => runApp(const CryptoCurrenciesListApp()),
     (error, stack) => GetIt.I<Talker>().handle(error, stack),
