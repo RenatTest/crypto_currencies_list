@@ -16,10 +16,9 @@ void main() {
   final dio = Dio();
   dio.interceptors.add(
     TalkerDioLogger(
+      talker: talker,
       settings: const TalkerDioLoggerSettings(
-        printRequestHeaders: true,
-        printResponseHeaders: true,
-        printResponseMessage: true,
+        printResponseData: false,
       ),
     ),
   );
