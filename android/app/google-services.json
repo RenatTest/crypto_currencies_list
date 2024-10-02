@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "662729051328",
+    "project_id": "crypto-coins-list-d261d",
+    "storage_bucket": "crypto-coins-list-d261d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662729051328:android:ce20171467b96c39683125",
+        "android_client_info": {
+          "package_name": "com.cryptoman.crypto_coins"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfL7qxt7knxZU8IEBEMjZArxt7p3KwCmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662729051328:android:4f77125e0ca81c58683125",
+        "android_client_info": {
+          "package_name": "com.cryptoman.crypto_coins_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfL7qxt7knxZU8IEBEMjZArxt7p3KwCmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
