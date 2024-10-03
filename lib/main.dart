@@ -22,7 +22,7 @@ void main() async {
   Hive.registerAdapter(CryptoCoinAdapter());
   Hive.registerAdapter(CryptoCoinDetailAdapter());
 
-  final cryptoCoinsBox = Hive.openBox<CryptoCoin>('crypto_coins_box');
+  final cryptoCoinsBox = await Hive.openBox<CryptoCoin>('crypto_coins_box');
 
   final app = await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
