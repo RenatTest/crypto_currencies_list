@@ -11,10 +11,10 @@ import 'package:talker_flutter/talker_flutter.dart';
 import 'package:talker_bloc_logger/talker_bloc_logger.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   final talker = TalkerFlutter.init();
   GetIt.I.registerSingleton(talker);
   GetIt.I<Talker>().debug('Talker started...');
-  WidgetsFlutterBinding.ensureInitialized();
 
   final app = await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
