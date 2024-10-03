@@ -24,6 +24,10 @@ class CryptoCoinsRepository implements AbstractCoinsRepository {
       final details = CryptoCoinDetail.fromJson(usdData);
       return CryptoCoin(name: e.key, details: details);
     }).toList();
+
+    final cryptoCoinMap = {for (var e in cryptoCoinsList) e.name: e};
+    await cryptoCoinsBox.putAll(cryptoCoinMap);
+
     return cryptoCoinsList;
   }
 
