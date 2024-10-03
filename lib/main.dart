@@ -18,8 +18,11 @@ void main() async {
   GetIt.I<Talker>().debug('Talker started...');
 
   await Hive.initFlutter();
+
   Hive.registerAdapter(CryptoCoinAdapter());
   Hive.registerAdapter(CryptoCoinDetailAdapter());
+
+  final cryptoCoinsBox = Hive.openBox('crypto_coins_box');
 
   final app = await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
