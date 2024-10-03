@@ -48,7 +48,10 @@ void main() async {
   );
 
   GetIt.I.registerLazySingleton<AbstractCoinsRepository>(
-    () => CryptoCoinsRepository(dio: dio),
+    () => CryptoCoinsRepository(
+      dio: dio,
+      cryptoCoinsBox: cryptoCoinsBox,
+    ),
   );
 
   FlutterError.onError =
