@@ -16,9 +16,13 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     CryptoCoinRoute.name: (routeData) {
+      final args = routeData.argsAs<CryptoCoinRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const CryptoCoinScreen(),
+        child: CryptoCoinScreen(
+          key: args.key,
+          coin: args.coin,
+        ),
       );
     },
     CryptoListRoute.name: (routeData) {
@@ -32,16 +36,40 @@ abstract class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [CryptoCoinScreen]
-class CryptoCoinRoute extends PageRouteInfo<void> {
-  const CryptoCoinRoute({List<PageRouteInfo>? children})
-      : super(
+class CryptoCoinRoute extends PageRouteInfo<CryptoCoinRouteArgs> {
+  CryptoCoinRoute({
+    Key? key,
+    required CryptoCoin coin,
+    List<PageRouteInfo>? children,
+  }) : super(
           CryptoCoinRoute.name,
+          args: CryptoCoinRouteArgs(
+            key: key,
+            coin: coin,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'CryptoCoinRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<CryptoCoinRouteArgs> page =
+      PageInfo<CryptoCoinRouteArgs>(name);
+}
+
+class CryptoCoinRouteArgs {
+  const CryptoCoinRouteArgs({
+    this.key,
+    required this.coin,
+  });
+
+  final Key? key;
+
+  final CryptoCoin coin;
+
+  @override
+  String toString() {
+    return 'CryptoCoinRouteArgs{key: $key, coin: $coin}';
+  }
 }
 
 /// generated route for
