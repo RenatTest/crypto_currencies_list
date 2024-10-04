@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:crypto_coins_list/features/crypto_coin/bloc/crypto_coin_details/crypto_coin_details_bloc.dart';
+import 'package:crypto_coins_list/features/crypto_coin/widgets/crypto_coin_details_image.dart';
 import 'package:crypto_coins_list/features/crypto_coin/widgets/widgets.dart';
 import 'package:crypto_coins_list/repositories/crypto_coins/crypto_coins.dart';
 import 'package:flutter/material.dart';
@@ -45,10 +46,8 @@ class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    height: 160,
-                    width: 160,
-                    child: Image.network(coinDetails.fullImageUrl),
+                  CryptoCoinDetailsImage(
+                    imageUrl: coinDetails.fullImageUrl,
                   ),
                   const SizedBox(height: 24),
                   Text(
