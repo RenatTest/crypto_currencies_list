@@ -30,15 +30,6 @@ class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
     super.initState();
   }
 
-  // @override
-  // void didChangeDependencies() {
-  //   final args = ModalRoute.of(context)?.settings.arguments;
-  //   assert(args != null && args is CryptoCoin, 'You must provide String args');
-  //   coin = args as CryptoCoin;
-  //   _coinDetailsBloc.add(LoadCryptoCoinDetails(currencyCode: coin!.name));
-  //   super.didChangeDependencies();
-  // }
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

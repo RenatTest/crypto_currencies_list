@@ -29,10 +29,6 @@ class CryptoCoinTile extends StatelessWidget {
       trailing: const Icon(Icons.arrow_forward_ios),
       onTap: () {
         AutoRouter.of(context).push(CryptoCoinRoute(coin: coin));
-        // Navigator.of(context).pushNamed(
-        //   '/coin',
-        //   arguments: coin,
-        // );
       },
     );
   }
