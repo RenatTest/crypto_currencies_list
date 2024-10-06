@@ -19,6 +19,7 @@ class _CryptoCurrenciesListAppState extends State<CryptoCurrenciesListApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'CryptoCurrenciesList',
+      debugShowCheckedModeBanner: false,
       theme: darkTheme,
       routerConfig: _appRouter.config(
         navigatorObservers: () => [
